@@ -3,24 +3,15 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="materialize.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Barrio" rel="stylesheet">
     <link href="/index.css" type="text/css" rel="stylesheet">
+    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <title></title>
   </head>
   <body>
-    <nav style="position:fixed; background-color: black;">
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo left" style="margin:0px 50px;">Logo</a>
-        <ul id="nav-mobile" class="hide-on-med-and-down" style="margin:0px 150px;">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">JavaScript</a></li>
-        </ul>
-      </div>
-    </nav>
 
-    <div class="parallax-container" style="height: 550px;">
+    <div class="parallax-container" style="height: 550px; top: 64px;">
       <div class="parallax"><img src="./images/1.jpeg"></div>
     </div>
     <div class="section white">
@@ -35,10 +26,22 @@
       <div class="parallax"><img src="./images/2.jpeg"></div>
     </div>
 
-    <nav id="footer" style="background-color: black;">
+    <nav id="header">
       <div class="nav-wrapper">
-        <ul style="text-align: center;" id="nav-mobile" class="hide-on-med-and-down" style="margin:0px 150px;">
-          <li ><a href="sass.html">&copy; 2017 Fadly Kayo</a></li>
+        <a href="#" class="brand-logo right" style="margin:0px 65px; color: #84ffff; font-size: 45px; font-family: Barrio">Fadly Kayo</a>
+        <ul id="nav-mobile" class="hide-on-med-and-down" style="margin:0px 75px;">
+          <li><a style="color: #e6ee9c; margin-right: 20px;" href="sass.html">Home</a></li>
+          <li><a style="color: #e6ee9c; margin-right: 20px;" href="badges.html">About Me</a></li>
+          <li><a style="color: #e6ee9c; margin-right: 20px;" href="collapsible.html">Games</a></li>
+          <li><a href="#"><i class="mdi facebook-box"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav id="footer">
+      <div class="nav-wrapper">
+        <ul id="nav-mobile" class="hide-on-med-and-down" style="margin:0px 85px;">
+          <li><label style="color: #e6ee9c;">&copy; 2017 Fadly Kayo</label></li>
         </ul>
       </div>
     </nav>

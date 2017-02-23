@@ -13,6 +13,13 @@ a {
   border: #bbdefb 1.5px solid;
 }
 
+#header {
+  top: 0px;
+  position: fixed;
+  background-color: black;
+}
+
 #footer {
   bottom: 0px;
+  background-color: black;
 }

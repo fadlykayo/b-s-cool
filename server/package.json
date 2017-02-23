@@ -12,6 +12,7 @@
     "ejs": "~2.5.5",
     "express": "~4.14.1",
     "live-server": "^1.2.0",
+    "mdi": "^1.8.36",
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.2"
   }
