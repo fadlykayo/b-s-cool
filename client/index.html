@@ -2,49 +2,63 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons|Lobster">
     <link rel="stylesheet" href="materialize.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Barrio" rel="stylesheet">
-    <link href="/index.css" type="text/css" rel="stylesheet">
-    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="index.css">
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <title></title>
   </head>
   <body>
+    <div id="root">
 
-    <div class="parallax-container" style="height: 550px; top: 64px;">
-      <div class="parallax"><img src="./images/1.jpeg"></div>
-    </div>
-    <div class="section white">
-      <div class="container" style="margin: 0px 100px;">
-        <div class="row">
-          <h2 class="header">Lorem Ipsum</h2>
-          <p class="grey-text text-darken-3 lighten-3" style="min-width: 124%; text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <nav id="header">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo right" style="margin:0px 65px; color: #ffb74d; font-size: 45px; font-family: Lobster">Humble Store</a>
+          <ul id="nav-mobile" class="hide-on-med-and-down" style="margin:0px 75px;">
+            <li><a class='a dropdown-button' href='#' data-activates='dropdown1'>Genre</a></li>
+            <li><a class="a" href="#">Browse</a></li>
+            <li><a class="a" href="#">About</a></li>
+            <ul id='dropdown1' class='dropdown-content'>
+              <li><a class="a" style="color: #e6ee9c;width:100%;" href="#!">Action</a></li>
+              <li><a class="a" style="color: #e6ee9c;width:100%;" href="#!">Adventure</a></li>
+              <li><a class="a" style="color: #e6ee9c;width:100%;" href="#!">FPS</a></li>
+              <li><a class="a" style="color: #e6ee9c;width:100%;" href="#!">Massively Multiplayer</a></li>
+              <li><a class="a" style="color: #e6ee9c;width:100%;" href="#!">RPG</a></li>
+              <li><a class="a" style="color: #e6ee9c;width:100%;" href="#!">Racing</a></li>
+              <li><a class="a" style="color: #e6ee9c;width:100%;" href="#!">Sports</a></li>
+              <li><a class="a" style="color: #e6ee9c;width:100%;" href="#!">Strategy</a></li>
+            </ul>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="parallax-container" style="height: 550px; top: 64px;">
+        <div class="parallax"><img src="./images/1.jpeg"></div>
+      </div>
+      <div id="list-of-games" class="section white">
+        <div class="row" style="margin: 25px 100px;">
+          <div class="col s12 m4" v-for=''>
+            <h5>Title</h5>
+            <div class="card-panel">
+              <span>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+              </span>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="parallax-container">
-      <div class="parallax"><img src="./images/2.jpeg"></div>
-    </div>
-
-    <nav id="header">
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo right" style="margin:0px 65px; color: #84ffff; font-size: 45px; font-family: Barrio">Fadly Kayo</a>
-        <ul id="nav-mobile" class="hide-on-med-and-down" style="margin:0px 75px;">
-          <li><a style="color: #e6ee9c; margin-right: 20px;" href="sass.html">Home</a></li>
-          <li><a style="color: #e6ee9c; margin-right: 20px;" href="badges.html">About Me</a></li>
-          <li><a style="color: #e6ee9c; margin-right: 20px;" href="collapsible.html">Games</a></li>
-          <li><a href="#"><i class="mdi facebook-box"></i></a></li>
-        </ul>
+      <div class="parallax-container">
+        <div class="parallax"><img src="./images/2.jpeg"></div>
       </div>
-    </nav>
 
-    <nav id="footer">
-      <div class="nav-wrapper">
-        <ul id="nav-mobile" class="hide-on-med-and-down" style="margin:0px 85px;">
-          <li><label style="color: #e6ee9c;">&copy; 2017 Fadly Kayo</label></li>
-        </ul>
-      </div>
-    </nav>
+      <nav id="footer">
+        <div class="nav-wrapper">
+          <ul id="nav-mobile" class="hide-on-med-and-down" style="margin:0px 85px;">
+            <li><label style="color: #e6ee9c;">&copy; 2017 Fadly Kayo</label></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
 
     <script src="jquery-3.1.1.js"></script>
     <script src="materialize.js"></script>
