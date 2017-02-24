@@ -18,10 +18,11 @@ body {
   border: #bbdefb 1.5px solid;
 }
 
-#header {
+#navbar {
   top: 0px;
   position: fixed;
   background-color: black;
+  z-index: 10;
 }
 
 #footer {

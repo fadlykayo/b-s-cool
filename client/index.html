@@ -11,7 +11,7 @@
   <body>
     <div id="root">
 
-      <nav id="header">
+      <nav id="navbar">
         <div class="nav-wrapper">
           <a href="#" class="brand-logo right" style="margin:0px 65px; color: #ffb74d; font-size: 45px; font-family: Lobster">Humble Store</a>
           <ul id="nav-mobile" class="hide-on-med-and-down" style="margin:0px 75px;">
@@ -35,14 +35,32 @@
       <div class="parallax-container" style="height: 550px; top: 64px;">
         <div class="parallax"><img src="./images/1.jpeg"></div>
       </div>
-      <div id="list-of-games" class="section white">
-        <div class="row" style="margin: 25px 100px;">
-          <div class="col s12 m4" v-for=''>
-            <h5>Title</h5>
-            <div class="card-panel">
-              <span>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
-              </span>
+      <div  class="section white">
+        <div style="margin:0px 110px;" id="search-bar">
+          <h5 style="margin-bottom: 20px;font-family: Lobster;">Search:</h5>
+          <a href="#"><label style="width:20%;" class="label-icon" for="search"><i class="material-icons">search</i></label></a>
+          <input style="width:20%; margin-bottom: 0px;" id="search" type="search" required>
+        </div>
+
+        <div class="row" id="list-of-games" style="margin: 25px 100px;">
+          <div class="col s12 m4" v-for='game in games' style="height: 300px;">
+            <h5 style="height:50px; font-family: Lobster;">{{ game.name }}</h5>
+            <div class="card horizontal">
+              <div class="card-image">
+                <img style="weight:200px; height:200px;" :src="game.cover.url" alt="game.jpeg">
+              </div>
+              <div class="card-stacked">
+                <div class="card-content" style="padding: 0px 20px; height: 150px;">
+                  <ul>
+                    <li>Release Date: {{ game.release_dates[0].human }}</li>
+                    <li>Rating: {{ game.rating }}</li>
+                    <li style="max-width: 195px; word-wrap: break-word;">Link: {{ game.url }}</li>
+                  </ul>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
