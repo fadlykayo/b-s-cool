@@ -38,8 +38,8 @@
       <div  class="section white">
         <div style="margin:0px 110px;" id="search-bar">
           <h5 style="margin-bottom: 20px;font-family: Lobster;">Search:</h5>
-          <a href="#"><label style="width:20%;" class="label-icon" for="search"><i class="material-icons">search</i></label></a>
-          <input style="width:20%; margin-bottom: 0px;" id="search" type="search" required>
+          <button class="btn" v-on:click="addGame()"><label style="color: white;width:20%;" class="label-icon" for="search">Search</label></button>
+          <input style="width:20%; margin-bottom: 0px; padding: 0px 10px;" v-model="add.content" id="search" type="search" required>
         </div>
 
         <div class="row" id="list-of-games" style="margin: 25px 100px;">

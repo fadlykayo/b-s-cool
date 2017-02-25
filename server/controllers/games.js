@@ -5,7 +5,7 @@ process.env.mashapeKey = config.igdb
 
 const getGames = (cb, params) => {
   igdb.games({
-    limit: 12,
+    limit: 20,
     offset: 0,
     fields: 'name,url,rating,release_dates,cover',
     order: 'rating:desc',
@@ -27,7 +27,7 @@ module.exports = {
       }).catch(function (err) {
         res.send(err)
       })
-    }, req.body.search)
+    }, req.body.content)
   },
 
   getAllGames: (req, res) => {

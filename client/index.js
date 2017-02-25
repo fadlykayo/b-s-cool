@@ -31,7 +31,9 @@ var app = new Vue({
         type: 'GET',
         url: 'http://localhost:3000/api/games',
         success: function (resp) {
-          app.games = resp[0].content
+          for (let i = 0; i < resp.length; i++) {
+            app.games = resp[i].content
+          }
         },
         error: function () {
           console.log('GET loadGames request error')
@@ -42,16 +44,15 @@ var app = new Vue({
     addGame: function () {
       $.ajax({
         type: 'POST',
-        url: 'http://localhost:3000/api/twatt',
+        url: 'http://localhost:3000/api/games',
         data: {
-          content: app.add.content,
-          userid: '58ad60072454f718d66cb760',
-          postedby: 'fadly',
-          tag: JSON.stringify(app.manipulateContent(app.add.content))
+          content: app.add.content
         },
         success: function (resp) {
-          app.add.content = '',
-          app.games.push(resp)
+          console.log(resp.content)
+          console.log('add ', [{content: resp.content}])
+          app.add.content = ''
+          app.games = [{content: resp.content}]
         },
         error: function () {
           console.log('POST addGame request error')
